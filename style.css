@@ -1,0 +1,123 @@
+/* -------------Table of contents----------
+
+1. Typography
+2. Layouts
+3. Image-containers
+4. Buttons
+
+-----------------------------------------*/
+
+/* ================
+      CSS Reset
+    ===============*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --kumbh: "Kumbh Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+body,
+html {
+  background-image: url(bg-pattern-top.svg), url(bg-pattern-bottom.svg);
+  background-position: right center, right;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left -18rem top -30rem, right -13rem bottom -30rem;
+  background-color: var(--Dark-cyan);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--kumbh);
+}
+
+/* ================
+      Layouts
+    ===============*/
+.section {
+  width: 23%;
+  box-shadow: 0px 20px 50px 20px #1e91a3;
+  background-color: white;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+  grid-template-areas:
+    "one"
+    "two"
+    "three";
+}
+
+.section__text {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  display: grid;
+  align-content: end;
+  border-bottom: 1px solid rgb(233, 223, 223);
+
+  position: relative;
+}
+
+.section__likes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+/* ================
+      Typography
+    ===============*/
+h1,
+h2 {
+  font-size: 18px;
+  color: var(--Very-dark-desaturated-blue);
+}
+.section__title span {
+  font-weight: 300;
+}
+.section__desc {
+  margin-bottom: 1.5rem;
+  color: var(--Dark-grayish-blue);
+  font-size: 14px;
+}
+.section__subdesc {
+  color: var(--Dark-grayish-blue);
+  font-size: 12px;
+}
+/* ================
+       Image-containers
+    ===============*/
+.img__img {
+  border-radius: 15px 15px 0 0;
+}
+.section__profile {
+  position: absolute;
+  bottom: 60%;
+  right: 36%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.section__profile img {
+  border-radius: 50%;
+  border: 4px solid white;
+}
+/* ================
+      Buttons
+    ===============*/
